@@ -18,7 +18,7 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	public UserModel getUser(String username){
-		return userDAO.userinfo(username);
+		return userDAO.getuser(username);
 	}
 	
 	

@@ -31,7 +31,7 @@ public interface UserDAO {
 	
 	public UserModel auth(Map<Object,Object> map);
 	
-	public UserModel userinfo(String username);
+	public UserModel getuser(String username);
 	
 
 }

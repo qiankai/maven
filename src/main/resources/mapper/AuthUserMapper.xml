@@ -11,7 +11,7 @@
          #{username},#{password},#{first_name},#{last_name},#{email},0,0,0,0,#{last_login},#{date_joined})
     </insert>
     
-    <select id="userinfo" parameterType="String" resultType="cn.xydata.auth.model.UserModel">
+    <select id="getuser" parameterType="String" resultType="cn.xydata.auth.model.UserModel">
        select * from auth_users where username = #{username}
        
     </select>
