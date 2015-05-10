@@ -11,7 +11,7 @@
          #{username},#{password},#{first_name},#{last_name},#{email},0,0,0,0,#{last_login},#{date_joined})
     </insert>
     
-    <select id="getuser" parameterType="String" resultType="cn.xydata.auth.model.UserModel">
+    <select id="getUser" parameterType="String" resultType="cn.xydata.auth.model.UserModel">
        select * from auth_users where username = #{username}
        
     </select>
@@ -20,10 +20,14 @@
            select count(*) from auth_users where username = #{username} and password = #{password}
     </select>
     
-    <select id="validateusername" parameterType="String" resultType="Integer">
+    <select id="validateUsername" parameterType="String" resultType="Integer">
     
           select count(*) from auth_users where username = #{username}
     
+    </select>
+    
+    <select id="listUser" resultType="cn.xydata.auth.model.UserModel">
+       select * from auth_users
     </select>
          
           

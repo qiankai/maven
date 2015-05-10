@@ -1,5 +1,6 @@
 package cn.xydata.auth.service.impl;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,15 +21,18 @@ public class UserServiceImpl implements UserService{
 	}
 	
 	public UserModel getUser(String username){
-		return userDAO.getuser(username);
+		return userDAO.getUser(username);
 	}
 	
 	public int auth(Map<Object,Object> map){
 		return userDAO.auth(map);
 	}
 	
-	public int validateusername(String username){
-		return userDAO.validateusername(username);
+	public int validateUsername(String username){
+		return userDAO.validateUsername(username);
 	}
 	
+	public List<UserModel> listUser(){
+		return userDAO.listUser();
+	}
 }

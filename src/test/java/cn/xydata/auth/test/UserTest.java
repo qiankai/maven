@@ -2,6 +2,7 @@ package cn.xydata.auth.test;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.junit.Before;
@@ -29,7 +30,7 @@ public class UserTest {
 //    @Test
 //    public void addUser(){
 //        UserModel user = new UserModel();
-//        user.setUsername("hello");
+//        user.setUsername("hellosssABCDEDF");
 //        user.setPassword("hdsssjskd");
 //        user.setFirst_name("fiets");
 //        user.setEmail("en@email.com");
@@ -38,7 +39,7 @@ public class UserTest {
 //        user.setLast_name("lsta");
 //        System.out.println(userService.insert(user));
 //    }
-//    
+    
     @Test
     public void select(){
     	UserModel user = userService.getUser("hello");
@@ -57,8 +58,16 @@ public class UserTest {
     @Test
     public void validate(){
     	System.out.println("validate!");
-    	System.out.println(userService.validateusername("hello"));
+    	System.out.println(userService.validateUsername("hello"));
     }
     
+    @Test
+    public void listUser(){
+    	List<UserModel> l = userService.listUser();
+    	for(UserModel b:l){
+    		System.out.println(b.getUsername());
+    	}
+    	//System.out.println(userService.listUser());
+    }
 
 }
