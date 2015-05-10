@@ -1,6 +1,8 @@
 package cn.xydata.auth.test;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -43,6 +45,20 @@ public class UserTest {
     	System.out.println(user.getPassword());
     }
     
+    @Test
+    public void auth(){
+    	Map map = new HashMap();
+    	map.put("username", "hello");
+    	map.put("password", "hdsssjskd");
+    	System.out.println(userService.auth(map));
+    	
+    }
+    
+    @Test
+    public void validate(){
+    	System.out.println("validate!");
+    	System.out.println(userService.validateusername("hello"));
+    }
     
 
 }

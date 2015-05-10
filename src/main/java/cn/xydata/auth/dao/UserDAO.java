@@ -29,9 +29,16 @@ public interface UserDAO {
 	 */
 	public int delete(UserModel user);
 	
-	public UserModel auth(Map<Object,Object> map);
+	/**
+	 * 
+	 * @param map(username=?,password=?)
+	 * @return 1 or 0 
+	 */
+	public int auth(Map<Object,Object> map);
 	
 	public UserModel getuser(String username);
+	
+	public int validateusername(String username);
 	
 
 }
